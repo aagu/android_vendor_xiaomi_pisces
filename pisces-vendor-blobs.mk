@@ -48,6 +48,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pisces/proprietary/lib/modules/mbt8797.ko:system/lib/modules/mbt8797.ko \
     vendor/xiaomi/pisces/proprietary/lib/modules/sd8797.ko:system/lib/modules/sd8797.ko \
     vendor/xiaomi/pisces/proprietary/lib/modules/wl12xx.ko:system/lib/modules/wl12xx.ko \
+    vendor/xiaomi/pisces/proprietary/etc/android_model_facea.dat:system/etc/android_model_facea.dat \
+    vendor/xiaomi/pisces/proprietary/etc/android_model_faceg.dat:system/etc/android_model_faceg.dat \
     vendor/xiaomi/pisces/proprietary/etc/libnfc-brcm-43341b00.conf:system/etc/libnfc-brcm-43341b00.conf \
     vendor/xiaomi/pisces/proprietary/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     vendor/xiaomi/pisces/proprietary/etc/mcrash_trigger.config:system/etc/mcrash_trigger.config \
