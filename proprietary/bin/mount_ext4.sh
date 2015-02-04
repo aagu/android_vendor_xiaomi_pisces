@@ -5,17 +5,6 @@ MOUNT_POINT=$2
 LOG_FILE="/dev/null"
 LOG_LOCATION="/data/.fsck_log/"
 
-# get syspart-flag from cmdline
-set -- $(cat /proc/cmdline)
-for x in "$@"; do
-    case "$x" in
-        syspart=*)
-        SYSPART=$(echo "${x#syspart=}")
-        ;;
-    esac
-done
-
-# storage log
 if [ "${MOUNT_POINT}" == "/storage_int" ]; then
     mkdir ${LOG_LOCATION}
     busybox find /data/.fsck_log/ -type f -mtime +7  -exec rm {} \;
@@ -23,35 +12,41 @@ if [ "${MOUNT_POINT}" == "/storage_int" ]; then
     LOG_FILE=${LOG_LOCATION}/storage_${TIMESTAMP}.log
 fi
 
-# mount partition
 if [ -e ${BLOCK_DEVICE} ]; then
-    # userdata
-    if [ "${BLOCK_DEVICE}" == "/dev/block/platform/sdhci-tegra.3/by-name/userdata" ];then
-        if [ "${SYSPART}" == "system" ];then
-            BINDMOUNT_PATH="/data_root/system0"
-        elif [ "${SYSPART}" == "system1" ];then
-            BINDMOUNT_PATH="/data_root/system1"
-        else
-            reboot recovery
+    /system/bin/dumpe2fs -h ${BLOCK_DEVICE} 2>&1 >${LOG_FILE}
+    ret1=$?
+    if [ $ret1 -ne 0 ];then
+        mke2fs -T ext4 -j -L ${MOUNT_POINT} ${BLOCK_DEVICE}
+        ret2=$?
+        echo "${PART_ALIAS} partition format ret = $ret2"
+        if [ $ret2 -ne 0 ];then
+            exit 1
         fi
+    fi
 
-        # mount /data_root
-        mkdir -p /data_root
-        chmod 0755 /data_root
-        mount -t ext4 -o nosuid,nodev,barrier=1,noauto_da_alloc ${BLOCK_DEVICE} /data_root
+    e2fsck -y ${BLOCK_DEVICE} 2>&1 >>${LOG_FILE}
+    ret3=$?
+    echo "e2fsck on ${BLOCK_DEVICE} ret = $ret3" 2>&1 >>${LOG_FILE}
 
-        # bind mount
-        mkdir -p ${BINDMOUNT_PATH}
-        chmod 0755 ${BINDMOUNT_PATH}
-        mount -o bind ${BINDMOUNT_PATH} ${MOUNT_POINT}
+    mount -t ext4 -o nosuid,nodev,barrier=1,noauto_da_alloc ${BLOCK_DEVICE} ${MOUNT_POINT}
 
-    # normal mount
-    else
+    if [ -e ${MOUNT_POINT}/extend_size.userdata -o -e ${MOUNT_POINT}/extend_size.storage ]; then
+        umount ${MOUNT_POINT}
+        e2fsck -f -y ${BLOCK_DEVICE}
+        ret4=$?
+        echo "Forced e2fsck on ${BLOCK_DEVICE} ret = $ret4"
+        if [ $ret4 -eq 4 ]; then
+            e2fsck -y ${BLOCK_DEVICE}
+        fi
+        resize2fs -f ${BLOCK_DEVICE}
+        ret5=$?
+        echo "resize ${BLOCK_DEVICE} ret = $ret5"
+        e2fsck -y ${BLOCK_DEVICE}
+        ret6=$?
+        echo "e2fsck on ${BLOCK_DEVICE} ret = $ret6"
         mount -t ext4 -o nosuid,nodev,barrier=1,noauto_da_alloc ${BLOCK_DEVICE} ${MOUNT_POINT}
+        if [ $ret5 -eq 0 -o $ret5 -eq 2 ]; then
+            rm ${MOUNT_POINT}/extend_size*
+        fi
     fi
 fi
-
-# hide recovery partition
-RECOVERY_NODE="$(busybox readlink -f /dev/block/platform/sdhci-tegra.3/by-name/recovery)"
-busybox mv "${RECOVERY_NODE}" /dev/recovery_moved
-busybox mknod -m 0600 "${RECOVERY_NODE}" b 1 3
