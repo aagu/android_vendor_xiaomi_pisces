@@ -158,7 +158,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pisces/proprietary/bin/load_audience_fw.sh:system/bin/load_audience_fw.sh \
     vendor/xiaomi/pisces/proprietary/bin/atmel_fw_update.sh:system/bin/atmel_fw_update.sh \
     vendor/xiaomi/pisces/proprietary/bin/mount_debugfs.sh:system/bin/mount_debugfs.sh \
-    vendor/xiaomi/pisces/proprietary/bin/mount_ext4.sh:system/bin/mount_ext4.sh \
     vendor/xiaomi/pisces/proprietary/bin/nvcap_test:system/bin/nvcap_test \
     vendor/xiaomi/pisces/proprietary/bin/nvcgcserver:system/bin/nvcgcserver \
     vendor/xiaomi/pisces/proprietary/bin/nv_hciattach:system/bin/nv_hciattach \
