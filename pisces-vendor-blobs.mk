@@ -38,6 +38,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pisces/proprietary/lib/hw/gralloc.tegra.so:system/lib/hw/gralloc.tegra.so \
     vendor/xiaomi/pisces/proprietary/lib/hw/hwcomposer.tegra.so:system/lib/hw/hwcomposer.tegra.so \
     vendor/xiaomi/pisces/proprietary/lib/hw/sensors.pisces.so:system/lib/hw/sensors.pisces.so \
+    vendor/xiaomi/pisces/proprietary/lib/libImmVibeJ.so:system/lib/libImmVibeJ.so \
     vendor/xiaomi/pisces/proprietary/lib/modules/baseband_usb_chr.ko:system/lib/modules/baseband_usb_chr.ko \
     vendor/xiaomi/pisces/proprietary/lib/modules/raw_ip_net.ko:system/lib/modules/raw_ip_net.ko \
     vendor/xiaomi/pisces/proprietary/lib/modules/sd8797mlan.ko:system/lib/modules/sd8797mlan.ko \
