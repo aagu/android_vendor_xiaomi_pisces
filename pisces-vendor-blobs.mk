@@ -33,7 +33,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pisces/proprietary/lib/egl/libGLESv2_tegra_impl.so:system/lib/egl/libGLESv2_tegra_impl.so \
     vendor/xiaomi/pisces/proprietary/lib/hw/audio_policy.tegra.so:system/lib/hw/audio_policy.tegra.so \
     vendor/xiaomi/pisces/proprietary/lib/hw/camera.tegra.so:system/lib/hw/camera.tegra.so \
-    vendor/xiaomi/pisces/proprietary/lib/hw/lights.pisces.so:system/lib/hw/lights.pisces.so \
     vendor/xiaomi/pisces/proprietary/lib/hw/gps.tegra.so:system/lib/hw/gps.tegra.so \
     vendor/xiaomi/pisces/proprietary/lib/hw/nfc_nci_nfca.default.so:system/lib/hw/nfc_nci_nfca.default.so \
     vendor/xiaomi/pisces/proprietary/lib/hw/nfc.tegra.so:system/lib/hw/nfc.tegra.so \
