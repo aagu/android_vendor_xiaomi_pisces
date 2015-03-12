@@ -68,7 +68,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pisces/proprietary/etc/nvcpud.conf:system/etc/nvcpud.conf \
     vendor/xiaomi/pisces/proprietary/etc/nvram_43341.txt:system/etc/nvram_43341.txt \
     vendor/xiaomi/pisces/proprietary/etc/power.pisces.rc:system/etc/power.pisces.rc \
-    vendor/xiaomi/pisces/proprietary/etc/ppp/ip-up-vpn:system/etc/ppp/ip-up-vpn \
     vendor/xiaomi/pisces/proprietary/etc/ril_atc_sprd.config:system/etc/ril_atc_sprd.config \
     vendor/xiaomi/pisces/proprietary/etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin:system/etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin \
     vendor/xiaomi/pisces/proprietary/etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin.pca:system/etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin.pca \
