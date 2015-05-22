@@ -25,7 +25,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pisces/proprietary/bin/i2cdump:system/bin/i2cdump \
     vendor/xiaomi/pisces/proprietary/bin/i2cget:system/bin/i2cget \
     vendor/xiaomi/pisces/proprietary/bin/i2cset:system/bin/i2cset \
-    vendor/xiaomi/pisces/proprietary/bin/immvibed:system/bin/immvibed \
     vendor/xiaomi/pisces/proprietary/bin/input_cfboost_init.sh:system/bin/input_cfboost_init.sh \
     vendor/xiaomi/pisces/proprietary/bin/inv_self_test:system/bin/inv_self_test \
     vendor/xiaomi/pisces/proprietary/bin/load_audience_fw.sh:system/bin/load_audience_fw.sh \
@@ -91,7 +90,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pisces/proprietary/lib/libcgdrv.so:system/lib/libcgdrv.so \
     vendor/xiaomi/pisces/proprietary/lib/libDiracAPI_SHARED.so:system/lib/libDiracAPI_SHARED.so \
     vendor/xiaomi/pisces/proprietary/lib/libfcamdng.so:system/lib/libfcamdng.so \
-    vendor/xiaomi/pisces/proprietary/lib/libImmVibeJ.so:system/lib/libImmVibeJ.so \
     vendor/xiaomi/pisces/proprietary/lib/libjni_nvremoteprotopkg.so:system/lib/libjni_nvremoteprotopkg.so \
     vendor/xiaomi/pisces/proprietary/lib/libjni_nvremote.so:system/lib/libjni_nvremote.so \
     vendor/xiaomi/pisces/proprietary/lib/libmplmpu.so:system/lib/libmplmpu.so \
