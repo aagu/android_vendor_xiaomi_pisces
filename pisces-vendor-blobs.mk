@@ -164,6 +164,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pisces/proprietary/lib/libsensors.mpl.so:system/lib/libsensors.mpl.so \
     vendor/xiaomi/pisces/proprietary/lib/libtsechdcp.so:system/lib/libtsechdcp.so \
     vendor/xiaomi/pisces/proprietary/lib/libtsec_wrapper.so:system/lib/libtsec_wrapper.so \
+    vendor/xiaomi/pisces/proprietary/lib/libwfd_common.so:system/lib/libwfd_common.so \
+    vendor/xiaomi/pisces/proprietary/lib/libwfd_sink.so:system/lib/libwfd_sink.so \
+    vendor/xiaomi/pisces/proprietary/lib/libwfd_source.so:system/lib/libwfd_source.so \
     vendor/xiaomi/pisces/proprietary/lib/modules/baseband_usb_chr.ko:system/lib/modules/baseband_usb_chr.ko \
     vendor/xiaomi/pisces/proprietary/lib/modules/gps_drv.ko:system/lib/modules/gps_drv.ko \
     vendor/xiaomi/pisces/proprietary/lib/modules/mbt8797.ko:system/lib/modules/mbt8797.ko \
