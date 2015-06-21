@@ -28,6 +28,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pisces/proprietary/bin/input_cfboost_init.sh:system/bin/input_cfboost_init.sh \
     vendor/xiaomi/pisces/proprietary/bin/inv_self_test:system/bin/inv_self_test \
     vendor/xiaomi/pisces/proprietary/bin/load_audience_fw.sh:system/bin/load_audience_fw.sh \
+    vendor/xiaomi/pisces/proprietary/bin/mdm_coredump:system/bin/mdm_coredump \
     vendor/xiaomi/pisces/proprietary/bin/mount_debugfs.sh:system/bin/mount_debugfs.sh \
     vendor/xiaomi/pisces/proprietary/bin/nvcap_test:system/bin/nvcap_test \
     vendor/xiaomi/pisces/proprietary/bin/nvcgcserver:system/bin/nvcgcserver \
