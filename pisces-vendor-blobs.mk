@@ -71,6 +71,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pisces/proprietary/etc/ril_atc_sprd.config:system/etc/ril_atc_sprd.config \
     vendor/xiaomi/pisces/proprietary/etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin:system/etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin \
     vendor/xiaomi/pisces/proprietary/etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin.pca:system/etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin.pca \
+    vendor/xiaomi/pisces/proprietary/framework/com.broadcom.bt.jar:system/framework/com.broadcom.bt.jar \
+    vendor/xiaomi/pisces/proprietary/framework/com.broadcom.nfc.jar:system/framework/com.broadcom.nfc.jar \
+    vendor/xiaomi/pisces/proprietary/framework/com.vzw.nfc.jar:system/framework/com.vzw.nfc.jar \
+    vendor/xiaomi/pisces/proprietary/framework/org.simalliance.openmobileapi.jar:system/framework/org.simalliance.openmobileapi.jar \
     vendor/xiaomi/pisces/proprietary/lib/egl/libEGL_tegra_impl.so:system/lib/egl/libEGL_tegra_impl.so \
     vendor/xiaomi/pisces/proprietary/lib/egl/libEGL_tegra.so:system/lib/egl/libEGL_tegra.so \
     vendor/xiaomi/pisces/proprietary/lib/egl/libGLESv1_CM_tegra_impl.so:system/lib/egl/libGLESv1_CM_tegra_impl.so \
@@ -201,7 +205,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pisces/proprietary/vendor/firmware/bcm43341/fw_bcmdhd.bin:system/vendor/firmware/bcm43341/fw_bcmdhd.bin \
     vendor/xiaomi/pisces/proprietary/vendor/firmware/bcm43341/fw_bcmdhd_mfg.bin:system/vendor/firmware/bcm43341/fw_bcmdhd_mfg.bin \
     vendor/xiaomi/pisces/proprietary/vendor/firmware/bcm43341/fw_bcmdhd_p2p.bin:system/vendor/firmware/bcm43341/fw_bcmdhd_p2p.bin \
-    vendor/xiaomi/pisces/proprietary/vendor/firmware/BCM43341NFCB0_002.001.009.0031.0067_Generic_I2C_NCD_Signed_configdata.ncd:system/vendor/firmware/BCM43341NFCB0_002.001.009.0031.0064_Generic_I2C_NCD_Signed_configdata.ncd \
-    vendor/xiaomi/pisces/proprietary/vendor/firmware/BCM43341NFCB0_002.001.009.0031.0067_Generic_PreI2C_NCD_Signed_configdata.ncd:system/vendor/firmware/BCM43341NFCB0_002.001.009.0031.0064_Generic_PreI2C_NCD_Signed_configdata.ncd \
-    vendor/xiaomi/pisces/proprietary/vendor/firmware/tlv320aic3262_fw_v1.bin:system/vendor/firmware/tlv320aic3262_fw_v1.bin \
-    vendor/xiaomi/pisces/proprietary/vendor/lib/hw/power.pisces.so:system/vendor/lib/hw/power.pisces.so
+    vendor/xiaomi/pisces/proprietary/vendor/firmware/BCM43341NFCB0_002.001.009.0031.0067_Generic_I2C_NCD_Signed_configdata.ncd:system/vendor/firmware/BCM43341NFCB0_002.001.009.0031.0067_Generic_I2C_NCD_Signed_configdata.ncd \
+    vendor/xiaomi/pisces/proprietary/vendor/firmware/BCM43341NFCB0_002.001.009.0031.0067_Generic_PreI2C_NCD_Signed_configdata.ncd:system/vendor/firmware/BCM43341NFCB0_002.001.009.0031.0067_Generic_PreI2C_NCD_Signed_configdata.ncd \
+    vendor/xiaomi/pisces/proprietary/vendor/firmware/tlv320aic3262_fw_v1.bin:system/vendor/firmware/tlv320aic3262_fw_v1.bin
