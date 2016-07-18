@@ -1,0 +1,1 @@
+find any reference to "new android::GraphicBuffer", change operator new size from 0x78 to 0x88
